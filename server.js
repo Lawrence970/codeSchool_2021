@@ -3,9 +3,12 @@
 //import express so u can use it
 const express = require("express");
 const {store, Todo} = require("./model"); // importing both objects 'store' and 'Todo'
+const cors = require("cors");
+
 // initialize your app/server
 const app = express();
 
+app.use(cors());
 
 // tell our app to use json
 app.use(express.json({}));
