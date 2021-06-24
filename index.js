@@ -17,6 +17,8 @@ persist.onConnect(()=>{
     });
 });
 
+// comment for testing heroku
+
 // connect to the database
 persist.connect();
 
