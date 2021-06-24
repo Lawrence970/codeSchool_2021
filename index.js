@@ -8,7 +8,7 @@ const persist = require("./persist"); // import from 'persist.js'
 const model = require("./model");
 
 //define a port
-const port = process.argv[2] || 8080;
+const port = process.argv[2] || process.env.PORT || 8080;
 
 // importing onConnect func from persist.js
 persist.onConnect(()=>{
