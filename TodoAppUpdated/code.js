@@ -1,4 +1,4 @@
-var url="https://cs-2021-todo-isaac-lawrecne.herokuapp.com/todo";
+var url="https://cs-2021-todo-isaac-lawrecne.herokuapp.com";
 
 var app = new Vue ({
         el:"#app",
