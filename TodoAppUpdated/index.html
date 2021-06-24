@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+    </head>
+    <div id="app" v-cloak>
+        <h1 style="font-size:50px">Todo App</h1>
+        <div class="input_area">
+            <h2 style="	font-size:35px">Create Todo<h2>
+            <label>Name</label>
+            <input type="text" v-model="new_todo_name" placeholder="Enter a new todo name"><br>
+            <label>Description</label>
+            <input type="text" v-model="new_todo_description" placeholder="Description"><br>
+            <label>Deadline</label>
+            <input style="margin-top:10px" type="date" v-model="new_todo_deadline" placeholder="Deadline Date"><br>
+            <button v-on:click="addNewTodo( )">Add</button>
+        </div>
+        <h2 style="font-size:35px;margin-bottom:0">Your Todo List</h2>
+        <ul id="todos">
+            <li class="todo" v-for="(todo,index) in todos">
+                <input class="checkbox" type="checkbox" v-model ="todo.done" v-on:click="saveTodoDone(todo)">
+
+                <div v-if="todo.editing">
+                    <input type= "text" v-model= "todo.name">
+                    <input type= "text" v-model= "todo.description">
+                    <input type= "text" v-model= "todo.deadline">
+                    <button v-on:click="saveTodo(todo)">Save</button>
+                </div>
+
+                <div v-else v-bind:class="{ done: todo.done }">
+                    <p> {{ todo.name }} </p><br>
+                    <p> {{ todo.description }} </p><br>
+                    <p> {{ todo.deadline }} </p><br>
+                    <button v-on:click="editTodo(todo)">Edit</button>
+                </div>
+            
+                <button v-on:click="deleteTodo(todo._id)">Delete</button>
+            </li>
+        </ul>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script src="code.js"></script>
+</html>

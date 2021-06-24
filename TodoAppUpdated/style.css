@@ -1,0 +1,87 @@
+[v-cloak] {
+	display: none;
+}
+
+
+#app {
+	text-align: center;
+
+	
+}
+h1,h2{
+	font-family: 'Dancing Script', cursive;
+}
+h1{
+	background-color: rgb(134, 236, 243);
+	margin: 0;
+}
+
+.input_area input{
+	margin-bottom:15px;
+	width:300px;
+	height:35px;
+}
+.input_area{
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background-color:rgb(189, 238, 222);
+
+
+}
+#todos {
+	width: 600px;
+	margin: 10px auto;
+	text-align: left;
+	max-height: 1000px;
+	padding: 20px;
+	padding-bottom: 0px;
+}
+.checkbox{
+	height:100px;
+	width:15px;
+	margin-left:50px;
+}
+
+.todo {
+	list-style: none;
+	border: 1px solid black;
+	padding: 10px;
+	margin-bottom: 10px;
+	background-color: white;
+}
+
+.todo input {
+	float: left;
+	margin-right: 65px;
+}
+
+.todo button {
+	float: right;
+	margin-left:5px;
+
+}
+label{
+	margin-right:10px;
+
+}
+.todo p {
+	display: inline;
+	margin-left: 10px;
+	padding: 0px;
+	font-family: 'Shadows Into Light', cursive;
+	font-size:25px;
+}
+li{
+	min-height: 150px;
+}
+
+button{
+	font-family: 'Shadows Into Light', cursive;
+	font-size:20px
+
+
+}
+
+.done{
+	text-decoration: line-through;
+}
